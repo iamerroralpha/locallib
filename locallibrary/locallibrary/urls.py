@@ -29,6 +29,7 @@ urlpatterns += [
 ]
 
 #Add URL maps to redirect the base URL to our application
+#the standard visit is just 127.0.0.1:8000 without anything else, so we redirect it to the catalog app
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='/catalog/')),
